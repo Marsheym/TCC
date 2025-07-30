@@ -1,8 +1,8 @@
 <?php
     //conexao com o banco
     $host="localhost";
-    $user="deborah";
-    $password="11235813";
+    $user="root";
+    $password="";
     $dbname="bdBeework";
 
     $conn=new mysqli($host,$user,$password,$dbname);
