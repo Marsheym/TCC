@@ -13,5 +13,6 @@
         die("Conexão falho: ".$conn->connect_error);
     }else{
         //echo "Conexão ok";
+        
     }
 ?>
