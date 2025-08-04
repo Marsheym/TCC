@@ -44,13 +44,13 @@ $(document).ready(function(){
             success: function(response){
                 if(response !== "erro"){
                     console.log(response);
-                    // $('#mensagem').html("Você será redirecionado");
-                    // $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
+                    $('#mensagem').html("Você será redirecionado");
+                    $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
 
-                    // //window.location.href="principal.php?id="+id+"&nome="+nome+"&tipo="+tipo;
-                    // window.location.href="login.php";
+                    //window.location.href="principal.php?id="+id+"&nome="+nome+"&tipo="+tipo;
+                    window.location.href="login.php";
                 }else{
-                    $('mensagem').html("Usuário não encontrado");
+                    $('#mensagem').html("Erro ao cadastrar");
                     $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
                 }
             },

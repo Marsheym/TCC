@@ -3,14 +3,14 @@ USE bdBeework;
 
 CREATE TABLE tbUsuario (
     idUsuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(100) NOT NULL,
-    cpfUsuario VARCHAR(14), 
+    email VARCHAR(100) NOT NULL UNIQUE,
+    cpfUsuario VARCHAR(14) bdbeeworktbusuarioUNIQUE, 
     senha VARCHAR(100) NOT NULL,
     nomeUsuario VARCHAR(100),
-    telefone VARCHAR(20) NOT NULL,
+    telefone VARCHAR(20) UNIQUE,
     fotoUsuario VARCHAR(255),
-    statusUsuario INT,
-    tipoUsuario INT NOT NULL, 
+    statusUsuario INT DEFAULT 1,
+    tipoUsuario INT NOT NULL DEFAULT 1, 
     biografiaUsuario VARCHAR(255),
     cep VARCHAR(255)
 ) ENGINE=INNODB;

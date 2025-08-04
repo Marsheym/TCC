@@ -5,12 +5,11 @@
         $email=$_POST['email'];
         $senha=$_POST['senha'];
     
-        $comandoSql="insert into tbUsuario (nomeUsuario, email, senha)('$nome','$email','$senha')";
+        $comandoSql="insert into tbUsuario (nomeUsuario, email, senha) values ('$nome','$email','$senha')";
     
         $resultado=$conn->query($comandoSql);
     
-        if($resultado->num_rows>0){
-            $row=$resultado->fetch_assoc();
+        if($resultado === true){
             echo "ok";
         }else{
             echo "erro";

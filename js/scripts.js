@@ -43,9 +43,10 @@ $('#botaoLogar').click(function(){
                     var tipo=dados[2];
 
                     //window.location.href="principal.php?id="+id+"&nome="+nome+"&tipo="+tipo;
-                    window.location.href="principal.php?id="+id;
+                    window.location.href="principal.php";
                 }else{
-                    $('mensagem').html("Usuário não encontrado");
+                    console.log(response)
+                    $('#mensagem').html("Usuário não encontrado");
                     $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
                 }
             },
