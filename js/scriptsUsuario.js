@@ -48,7 +48,7 @@ $(document).ready(function(){
                     $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
 
                     //window.location.href="principal.php?id="+id+"&nome="+nome+"&tipo="+tipo;
-                    window.location.href="login.php";
+                    window.location.href="login.html";
                 }else{
                     $('#mensagem').html("Erro ao cadastrar");
                     $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
