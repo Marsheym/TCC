@@ -9,18 +9,17 @@
   /* Cores padrão */
   :root {
     --roxo: #5A248F;
-    --amarelo: #FFBF00;
+    --mostarda: #FFBF00;
     --laranja: #FF8800;
     --cinza-claro: #CCC8C8;
     --cinza-medio: #737373;
     --cinza-escuro: #5E5E5E;
     --preto: #1E1E1E;
     --branco: #FFFFFF;
-    --branco-gelo: #EBEBEB;
+    --gelo: #EBEBEB;
   }
   
   .banner {
-    width: 99.2vw;
     height:  80vh;
     background-image: url(../imagens/fundo.jpg);
     background-size: cover;        /* Faz a imagem cobrir todo o espaço da div */
@@ -31,14 +30,14 @@
 
   /* Backgrounds */
   body {
-    background-color: var(--branco-gelo);
+    background-color: var(--gelo);
     color: var(--preto);
   }
   
   /* Cabeçalho */
   header {
-    background-color: var(--roxo);
-    color: var(--branco);
+    background-color: var(--mostarda);
+    color: var(--gelo);
     padding: 20px;
     text-align: center;
     position: sticky;
@@ -47,7 +46,7 @@
   
   /* Navegação */
   nav {
-    background-color: var(--laranja);
+    background-color: var(--roxo);
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -63,8 +62,8 @@
   
   /* Botões */
   button, .btn {
-    background-color: var(--amarelo);
-    color: var(--preto);
+    background-color: var(--roxo);
+    color: var(--branco);
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -74,8 +73,9 @@
   }
   
   button:hover, .btn:hover {
-    background-color: var(--laranja);
+    background-color: var(--roxo);
     color: var(--branco);
+    transform: scale(1.1);
   }
   
   /* Seções */
@@ -83,13 +83,12 @@
     padding: 40px 20px;
     background-color: var(--branco);
     margin-bottom: 20px;
-    /* border-radius: 12px; */
     box-shadow: 0 0 10px rgba(90, 36, 143, 0.1);
   }
   
   /* Rodapé */
   footer {
-    background-color: var(--preto);
+    background-color: var(--roxo);
     color: var(--branco);
     text-align: center;
     padding: 30px 10px;
@@ -143,3 +142,7 @@
     }
   }
   
+  .categorias{
+    position: relative;
+    z-index: -1;
+  }
