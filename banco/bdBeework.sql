@@ -4,7 +4,7 @@ USE bdBeework;
 CREATE TABLE tbUsuario (
     idUsuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(100) NOT NULL UNIQUE,
-    cpfUsuario VARCHAR(14) bdbeeworktbusuarioUNIQUE, 
+    cpfUsuario VARCHAR(14) UNIQUE, 
     senha VARCHAR(100) NOT NULL,
     nomeUsuario VARCHAR(100),
     telefone VARCHAR(20) UNIQUE,
