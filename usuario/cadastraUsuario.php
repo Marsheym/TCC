@@ -1,7 +1,11 @@
 <?php
         include "conexao.php";
+
+        $nome=$_POST['nome'];
+        $email=$_POST['email'];
+        $senha=$_POST['senha'];
     
-        $comandoSql="select * from tbUsuario";
+        $comandoSql="INSERT INTO tbUsuario (nomeUsuario, email, senha) VALUES ('$nome','$email','$senha')";
     
         $resultado=$conn->query($comandoSql);
     

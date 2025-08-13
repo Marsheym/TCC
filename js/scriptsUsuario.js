@@ -37,7 +37,7 @@ $(document).ready(function(){
         //$('#mensagem').html("Usuário ok");
         //$('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
         $.ajax({
-            url: 'cadastraUsuario.php',
+            url: '../usuario/cadastraUsuario.php',
             type: 'POST',
             data: {email:em,senha:se,nome:no},
 
@@ -48,7 +48,7 @@ $(document).ready(function(){
                     $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
 
                     //window.location.href="principal.php?id="+id+"&nome="+nome+"&tipo="+tipo;
-                    window.location.href="login.html";
+                    window.location.href="../telas/login.html";
                 }else{
                     $('#mensagem').html("Erro ao cadastrar");
                     $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);

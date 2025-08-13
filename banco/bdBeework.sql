@@ -9,7 +9,6 @@ CREATE TABLE tbUsuario (
     nomeUsuario VARCHAR(100),
     telefone VARCHAR(20) UNIQUE,
     fotoUsuario VARCHAR(255),
-    statusUsuario INT DEFAULT 1,
     tipoUsuario INT NOT NULL DEFAULT 1, 
     biografiaUsuario VARCHAR(255),
     cep VARCHAR(255)

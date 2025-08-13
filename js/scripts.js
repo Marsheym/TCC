@@ -15,10 +15,10 @@ $(document).ready(function(){
 
 $('#botaoLogar').click(function(){
     if($('#email').val()=='' ||$('#email').val()=="name@example.com"){
-        $('#mensagem').html("Email inválido");
+        $('#mensagem').html("Email ou senha inválida");
         $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
     }else if($('#senha').val()==''||$('#senha').val()=="senha"){
-        $('#mensagem').html("Senha inválida");
+        $('#mensagem').html("Email ou senha inválida");
         $('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
     }else{
         em=$('#email').val();
@@ -26,7 +26,7 @@ $('#botaoLogar').click(function(){
         //$('#mensagem').html("Usuário ok");
         //$('#mensagem').fadeIn(300).delay(2000).fadeOut(400);
         $.ajax({
-            url: 'pesquisaUsuario.php',
+            url: '../usuario/pesquisaUsuario.php',
             type: 'POST',
             data: {email:em,senha:se},
 
@@ -43,7 +43,7 @@ $('#botaoLogar').click(function(){
                     var tipo=dados[2];
 
                     //window.location.href="principal.php?id="+id+"&nome="+nome+"&tipo="+tipo;
-                    window.location.href="principal.php";
+                    window.location.href="../telas/principal.html";
                 }else{
                     console.log(response)
                     $('#mensagem').html("Usuário não encontrado");

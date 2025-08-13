@@ -1,11 +1,10 @@
 <?php
         include "conexao.php";
 
-        $nome=$_POST['nome'];
-        $email=$_POST['email'];
-        $senha=$_POST['senha'];
+        $idUsuario=$_POST['idUsuario'];
+
     
-        $comandoSql="insert into tbUsuario (nomeUsuario, email, senha) values ('$nome','$email','$senha')";
+        $comandoSql="DELETE FROM tbusuario WHERE idUsuario='$idUsuario'";
     
         $resultado=$conn->query($comandoSql);
     
