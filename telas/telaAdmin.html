@@ -20,7 +20,7 @@
         </div>
         
         <div class="user-info">
-            Olá, Admin
+            <a href="/telas/editaPerfil.html" class="admin-link" id="admin-link">Olá, Admin</a>
         </div>
     </header>
 
@@ -126,6 +126,13 @@
     </footer>
 
     <script>
+        // Buscar nome do administrador via AJAX
+        fetch('/usuario/getAdminName.php')
+            .then(response => response.text())
+            .then(nome => {
+                document.getElementById('admin-link').textContent = `Olá, ${nome}`;
+            });
+
         // Chart.js configuration
         const ctx = document.getElementById('analyticsChart').getContext('2d');
         const chart = new Chart(ctx, {
