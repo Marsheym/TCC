@@ -1,10 +1,10 @@
 <?php
-        include "conexao.php";
+        include "../conexao.php";
 
-        // $nome=$_POST['nome'];
-        // $descricao=$_POST['email'];
+        $nome=$_POST['nome'];
+        $descricao=$_POST['email'];
 
-        $comandoSql="insert into tbCategoria (nomeCategoria, descricaoCategoria) values ('$nome','$descricao')";
+        $comandoSql="INSERT INTO tbCategoria (nomeCategoria, descricaoCategoria) VALUES ('$nome','$descricao')";
     
         $resultado=$conn->query($comandoSql);
     

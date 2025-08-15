@@ -1,7 +1,7 @@
 <?php
-        include "conexao.php";
+        include "../conexao.php";
 
-        $idUsuario=$_POST['idUsuario'];
+        $idUsuario=$_DELETE['idUsuario'];
 
     
         $comandoSql="DELETE FROM tbusuario WHERE idUsuario='$idUsuario'";

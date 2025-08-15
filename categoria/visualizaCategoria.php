@@ -1,12 +1,13 @@
 <?php
-        include "conexao.php";
+        include "../conexao.php";
     
-        $comandoSql="select * from tbCategoria";
+        $comandoSql="SELECT * FROM tbCategoria";
     
         $resultado=$conn->query($comandoSql);
     
-        if($resultado === true){
-            echo "ok";
+        if($resultado->num_rows>0){
+            $row=$resultado->fetch_assoc();
+            echo $row['iCategoria']."|". $row['nomeCategoria'] ."|". $row["descricaoCategoria"];
         }else{
             echo "erro";
         }

@@ -9,7 +9,7 @@ CREATE TABLE tbUsuario (
     nomeUsuario VARCHAR(100),
     telefone VARCHAR(20) UNIQUE,
     fotoUsuario VARCHAR(255),
-    tipoUsuario INT NOT NULL DEFAULT 1, 
+    tipoUsuario INT NOT NULL DEFAULT 0, 
     biografiaUsuario VARCHAR(255),
     cep VARCHAR(255)
 ) ENGINE=INNODB;
@@ -49,7 +49,7 @@ CREATE TABLE tbAvaliacao (
         ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=INNODB;
 
-insert into tbUsuario (email, cpfUsuario, senha, nomeUsuario, telefone, fotoUsuario, statusUsuario, tipoUsuario, biografiaUsuario, cep)
-values ('juniogr.moura@gmail.com', '518.090.728-40', 'Ju171227*', 'Junio Moura', '(17) 99107-9194', 'foto.jpg', 1, 0, 'Desenvolvedor de Sistemas', '15047-259'),
-('deborah22rex@gmail.com', '512.924.068-52', '11235813', 'Henrique Paglione', '(17) 99229-6648', 'foto.jpg', 1, 1, 'Churrasqueiro', '15115-000'),
-('kaique.reimberg@icloud.com', '528.611.568-30', '@Kaique2504', 'Kaique Reimberg', '(17) 99621-1509', 'foto.jpg', 1, 2, 'Administrador BeeWork', '15140-000');
+insert into tbUsuario (email, cpfUsuario, senha, nomeUsuario, telefone, fotoUsuario, tipoUsuario, biografiaUsuario, cep)
+values ('juniogr.moura@gmail.com', '518.090.728-40', 'Ju171227*', 'Junio Moura', '(17) 99107-9194', 'foto.jpg', 0, 'Desenvolvedor de Sistemas', '15047-259'),
+('deborah22rex@gmail.com', '512.924.068-52', '11235813', 'Henrique Paglione', '(17) 99229-6648', 'foto.jpg', 1, 'Churrasqueiro', '15115-000'),
+('kaique.reimberg@icloud.com', '528.611.568-30', '@Kaique2504', 'Kaique Reimberg', '(17) 99621-1509', 'foto.jpg', 2, 'Administrador BeeWork', '15140-000');
