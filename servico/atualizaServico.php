@@ -39,6 +39,41 @@
             }
             $comandoSql = $comandoSql . " codCategoria = '$codCategoria'";
         }
+        if(isset($dados['mediaValor'])){
+            $mediaValor=$dados['mediaValor'];
+            if($virgula === true){
+                $comandoSql = $comandoSql . ",";
+            }
+            $comandoSql = $comandoSql . " mediaValor = '$mediaValor'";
+        }
+        if(isset($dados['tituloServico'])){
+            $tituloServico=$dados['tituloServico'];
+            if($virgula === true){
+                $comandoSql = $comandoSql . ",";
+            }
+            $comandoSql = $comandoSql . " tituloServico = '$tituloServico'";
+        }
+        if(isset($dados['dataHora'])){
+            $dataHora=$dados['dataHora'];
+            if($virgula === true){
+                $comandoSql = $comandoSql . ",";
+            }
+            $comandoSql = $comandoSql . " dataHora = '$dataHora'";
+        }
+        if(isset($dados['fotoServico'])){
+            $fotoServico=$dados['fotoServico'];
+            if($virgula === true){
+                $comandoSql = $comandoSql . ",";
+            }
+            $comandoSql = $comandoSql . " fotoServico = '$fotoServico'";
+        }
+        if(isset($dados['codUsuario'])){
+            $codUsuario=$dados['codUsuario'];
+            if($virgula === true){
+                $comandoSql = $comandoSql . ",";
+            }
+            $comandoSql = $comandoSql . " codUsuario = '$codUsuario'";
+        }
 
         $comandoSql= $comandoSql . " WHERE idServico = '$id';";
     
