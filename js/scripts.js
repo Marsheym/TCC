@@ -43,7 +43,7 @@ $('#botaoLogar').click(function(){
                     var tipo=dados[2];
 
                     //window.location.href="principal.php?id="+id+"&nome="+nome+"&tipo="+tipo;
-                    window.location.href="../telas/principal.html";
+                    window.location.href="../telas/principal.html?"+id;
                 }else{
                     console.log(response)
                     $('#mensagem').html("Usuário não encontrado");
